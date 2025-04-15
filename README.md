@@ -40,5 +40,5 @@ Universidad Tecnológica Nacional
 
 > “Las bases de datos no son mágicas, pero bien diseñadas pueden parecerlo.” ✨
 
-
-
+```bash
+git clone https://github.com/tu-usuario/BasesDeDatos2.git
