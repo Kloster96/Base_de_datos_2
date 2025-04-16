@@ -29,7 +29,7 @@ Este repositorio contiene los trabajos prácticos, apuntes y ejemplos de la mate
 ## 👨‍💻 Autores
 
 **Luciano Kloster**  
-**Francisco Jaszczuk** 
+**Francisco Jaszczuk**  
 **Escalante Pablo**  
 **Alvarez Lisandro**  
 **Angelina Rossi**  
