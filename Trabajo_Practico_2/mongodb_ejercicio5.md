@@ -7,7 +7,6 @@
 4. Clic en "Create"
 
 ## 2. Insertar datos de ventas
-Insertar los siguientes documentos:
 
 ```json
 {
@@ -70,7 +69,7 @@ Insertar los siguientes documentos:
 5. Clic en "Add Stage"
 
 ## Resultado esperado
-El resultado mostrará:
+
 - laptop: 3600 (3 unidades)
 - teclado: 400 (8 unidades)
 - mouse: 250 (10 unidades)
