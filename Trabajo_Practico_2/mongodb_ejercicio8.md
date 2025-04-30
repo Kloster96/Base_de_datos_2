@@ -17,8 +17,6 @@
 
 5. Clic en "Add Stage"
 
-## Resultado
-El resultado mostrará los documentos de alumnos con un nuevo campo `cursos_inscritos` que contiene un array con los datos completos de cada curso al que está inscrito el alumno.
 
 ## Explicación de parámetros
 - `from`: La colección desde la cual buscar documentos (cursos)
