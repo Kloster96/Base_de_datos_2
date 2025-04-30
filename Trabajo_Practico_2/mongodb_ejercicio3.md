@@ -20,4 +20,3 @@ Recuperar los nombres y puestos de todos los empleados, sin mostrar el `_id`:
 - `"puesto": 1`: Incluir el campo puesto en los resultados
 - `"_id": 0`: Excluir el campo _id de los resultados
 
-Esta proyección nos permite obtener solo los datos que necesitamos (nombre y puesto) sin incluir otros campos ni el identificador único de MongoDB.
