@@ -1,0 +1,26 @@
+// === EJERCICIO 10: SEGURIDAD Y BACKUPS ===
+
+// Cambiamos al contexto de la base de datos 'empresa'
+use('empresa')
+
+// Creamos un usuario con permisos de lectura y escritura sobre esta base
+db.createUser({
+  user: "kloster",           // Nombre del usuario
+  pwd: "1234",               // Contraseña del usuario
+  roles: [
+    {
+      role: "readWrite",     // Permite leer y escribir en la base
+      db: "empresa"          // Base de datos a la que se aplica este rol
+    }
+  ]
+})
+
+// === BACKUP Y RESTAURACIÓN (estos comandos se ejecutan en la terminal del sistema) ===
+
+// Comando para hacer un backup de la base de datos 'empresa':
+// mongodump --db empresa --out /ruta/del/backup en mi caso use (mongodump --db empresa --out /Users/kloster/Desktop/backup_empresa)
+
+// Comando para restaurar el backup:
+// mongorestore --db empresa /ruta/del/backup/empresa en mi caso use (mongorestore --db empresa /Users/kloster/Desktop/backup_empresa)
+
+// Asegurate de que el servicio de MongoDB esté corriendo antes de ejecutar mongodump o mongorestore
