@@ -1,0 +1,13 @@
+use('empresa')
+
+db.createCollection("clientes")
+
+db.clientes.insertMany([
+    { nombre: "Ana", apellido: "Gonzalez", email: "ana@ejemplo.com" },
+    { nombre: "Pedro", apellido: "Martinez", email: "pedro@ejemplo.com" },
+    { nombre: "Laura", apellido: "Rodríguez", email: "laura@ejemplo.com" }
+])
+
+db.clientes.createIndex({ apellido: 1, nombre: 1 })
+
+db.clientes.getIndexes()

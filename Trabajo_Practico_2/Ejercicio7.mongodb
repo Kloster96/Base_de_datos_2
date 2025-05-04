@@ -1,0 +1,19 @@
+use('empresa')
+
+db.createCollection("cursos")
+db.createCollection("alumnos")
+
+db.cursos.insertMany([
+    { _id: 1, nombre: "MongoDB Basico", duracion: "20 horas" },
+    { _id: 2, nombre: "JavaScript Avanzado", duracion: "30 horas" },
+    { _id: 3, nombre: "Desarrollo Web", duracion: "40 horas" }
+])
+
+db.alumnos.insertMany([
+    { nombre: "Miguel Sanchez", edad: 28, id_cursos: [1, 3] },
+    { nombre: "Elena Castro", edad: 24, id_cursos: [2] },
+    { nombre: "Roberto Díaz", edad: 30, id_cursos: [1, 2, 3] }
+])
+
+db.cursos.find()
+db.alumnos.find()

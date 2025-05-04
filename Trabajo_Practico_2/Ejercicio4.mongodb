@@ -1,0 +1,12 @@
+use('empresa')
+db.empleados.updateMany(
+    {},
+    { $set: {
+        direccion: {
+            calle: "Av. Principal 123",
+            ciudad: "Buenos Aires",
+            codigo_postal: "1000"
+        }
+    }}
+)
+db.empleados.find()
