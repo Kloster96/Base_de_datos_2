@@ -26,15 +26,15 @@ Este repositorio contiene los trabajos prácticos, apuntes y ejemplos de la mate
 - SQL (MySQL / MongoDB)
 - VSCode
 
-## 👨‍💻 Autores
+## 👨‍💻 Estudiantes de la Universidad Tecnológica Nacional carrera Técnico en Programación  
 
 **Luciano Kloster**  
 **Francisco Jaszczuk**  
 **Escalante Pablo**  
 **Alvarez Lisandro**  
 **Angelina Rossi**  
-Estudiante de Técnico en Programación  
-Universidad Tecnológica Nacional
+
+
 
 ---
 
