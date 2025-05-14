@@ -1,0 +1,50 @@
+use("tiendaOnline");
+
+db.ventas.aggregate([
+  {
+    $lookup: {
+      from: "productos",
+      localField: "producto_id",
+      foreignField: "_id",
+      as: "info_producto"
+    }
+  },
+  {
+    $project: {
+      _id: 1,
+      cliente: 1,
+      cantidad: 1,
+      precio_unitario: 1,
+      total: 1,
+      fecha: 1,
+      estado: 1,
+      metodo_pago: 1,
+      info_producto: { $arrayElemAt: ["$info_producto", 0] }
+    }
+  }
+]);
+
+// Group
+db.ventas.aggregate([
+  {
+    $lookup: {
+      from: "productos",
+      localField: "producto_id",
+      foreignField: "_id",
+      as: "info_producto"
+    }
+  },
+  {
+    $unwind: "$info_producto"
+  },
+  {
+    $group: {
+      _id: "$info_producto.categoria",
+      total_ventas: { $sum: "$total" },
+      total_cantidad: { $sum: 1 }
+    }
+  },
+  {
+    $sort: { total_ventas: -1 }
+  }
+]);

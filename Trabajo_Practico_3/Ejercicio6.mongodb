@@ -1,0 +1,38 @@
+use ("tiendaOnline");
+
+db.ventas.aggregate([
+  {
+    $project: {
+      mes: { $month: "$fecha" },
+      año: { $year: "$fecha" },
+      total: 1
+    }
+  },
+  {
+    $group: {
+      _id: { año: "$año", mes: "$mes" },
+      totalVendido: { $sum: "$total" }
+    }
+  },
+  {
+    $sort: { "_id.año": 1, "_id.mes": 1 }
+  }
+])
+db.ventas.aggregate([
+  {
+    $project: {
+      diaSemana: { $dayOfWeek: "$fecha" },
+      total: 1
+    }
+  },
+  {
+    $group: {
+      _id: "$diaSemana",
+      totalVendido: { $sum: "$total" },
+      cantidadVentas: { $sum: 1 }
+    }
+  },
+  {
+    $sort: { totalVendido: -1 }
+  }
+])
