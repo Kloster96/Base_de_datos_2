@@ -1,0 +1,83 @@
+[
+  {
+    "endpoint": "api/reservas",
+    "method": "POST",
+    "body": [
+      {
+        "habitacionId": "ID_HABITACION1",
+        "tipo": "Individual",
+        "fechaEntrada": "2025-07-14T00:00:00.000Z",
+        "fechaSalida": "2025-07-16T00:00:00.000Z",
+        "huesped": {
+          "nombre": "Carlos Gómez",
+          "email": "carlos@correo.com",
+          "telefono": "+5491133331111"
+        }
+      },
+      {
+        "habitacionId": "ID_HABITACION2",
+        "tipo": "Doble",
+        "fechaEntrada": "2025-07-15T00:00:00.000Z",
+        "fechaSalida": "2025-07-18T00:00:00.000Z",
+        "huesped": {
+          "nombre": "María Torres",
+          "email": "maria@correo.com",
+          "telefono": "+5491144442222"
+        }
+      },
+      {
+        "habitacionId": "ID_HABITACION3",
+        "tipo": "Triple",
+        "fechaEntrada": "2025-07-17T00:00:00.000Z",
+        "fechaSalida": "2025-07-20T00:00:00.000Z",
+        "huesped": {
+          "nombre": "Leandro Pérez",
+          "email": "leandro@correo.com",
+          "telefono": "+5491155553333"
+        }
+      },
+      {
+        "habitacionId": "ID_HABITACION4",
+        "tipo": "Suite",
+        "fechaEntrada": "2025-07-19T00:00:00.000Z",
+        "fechaSalida": "2025-07-22T00:00:00.000Z",
+        "huesped": {
+          "nombre": "Florencia Díaz",
+          "email": "florencia@correo.com",
+          "telefono": "+5491166669999"
+        }
+      }
+    ]
+  },
+    {
+    "endpoint": "/api/reservas",
+    "method": "GET"
+  },
+  {
+    "endpoint": "/api/reservas/ID_RESERVA",
+    "method": "GET"
+  },
+  {
+    "endpoint": "/api/reservas/reporte/7/2025",
+    "method": "GET"
+  },
+  {
+    "endpoint": "/api/reservas/ID_RESERVA",
+    "method": "PUT",
+    "body": {
+      "fechaEntrada": "2025-07-25T00:00:00.000Z",
+      "fechaSalida": "2025-07-28T00:00:00.000Z"
+    }
+  },
+  {
+    "endpoint": "/api/reservas/cancelar/ID_RESERVA",
+    "method": "PUT"
+  },
+  {
+    "endpoint": "/api/reservas/checkin/ID_RESERVA"
+  },
+  {
+    "endpoint": "/api/reservas/ID_RESERVA",
+    "method": "DELETE"
+  }
+]

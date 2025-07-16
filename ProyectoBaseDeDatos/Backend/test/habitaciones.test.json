@@ -1,0 +1,83 @@
+[
+ 
+  {
+    "endpoint": "/api/habitaciones",
+    "method": "POST",
+    "body": [
+      {
+        "numero": "201",
+        "tipo": "Individual",
+        "capacidad": 1,
+        "precioPorNoche": 90,
+        "amenidades": [
+          "WiFi",
+          "TV"
+        ],
+        "disponible": true
+      },
+      {
+        "numero": "202",
+        "tipo": "Doble",
+        "capacidad": 2,
+        "precioPorNoche": 130,
+        "amenidades": [
+          "WiFi",
+          "Aire acondicionado"
+        ],
+        "disponible": true
+      },
+      {
+        "numero": "203",
+        "tipo": "Triple",
+        "capacidad": 3,
+        "precioPorNoche": 160,
+        "amenidades": [
+          "WiFi",
+          "TV",
+          "Frigobar"
+        ],
+        "disponible": true
+      },
+      {
+        "numero": "204",
+        "tipo": "Suite",
+        "capacidad": 4,
+        "precioPorNoche": 220,
+        "amenidades": [
+          "WiFi",
+          "Jacuzzi",
+          "Cafetera"
+        ],
+        "disponible": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/habitaciones",
+    "method": "GET"
+  },
+  {
+    "endpoint": "/api/habitaciones/capacidad/3",
+    "method": "GET"
+  },
+  {
+    "endpoint": "/api/habitaciones/disponibles",
+    "method": "GET",
+    "params": {
+      "fechaEntrada": "2025-07-20T00:00:00.000Z",
+      "fechaSalida": "2025-07-23T00:00:00.000Z",
+      "tipo": "Suite"
+    }
+  },
+  {
+    "endpoint": "/api/habitaciones/ID_HABITACION",
+    "method": "PUT",
+    "body": {
+      "precioPorNoche": 180
+    }
+  },
+  {
+    "endpoint": "/api/habitaciones/ID_HABITACION",
+    "method": "DELETE"
+  }
+]
